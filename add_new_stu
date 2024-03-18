@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Primaray school managment shcool</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.header h1 {
+  margin: 0;
+}
+
+.sidebar {
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  padding-top: 70px; /* Adjusted to accommodate header */
+  transition: 0.3s;
+}
+
+.sidebar a {
+  padding: 10px 15px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #818181;
+  display: block;
+}
+
+.sidebar a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+.profile {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.profile img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.content {
+  margin-left: 250px;
+  padding: 20px;
+}
+
+.form-section {
+  margin-bottom: 20px;
+}
+
+.form-section h2 {
+  margin-bottom: 10px;
+}
+
+.form-section label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-section input,
+.form-section select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+.submit-btn {
+  background-color: #8e1c82;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+}
+
+.submit-btn.primary {
+  background-color: purple;
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>PSLMS</h1>
+</div>
+
+<div class="profile">
+  <img src="avatar.png" alt="Admin">
+  <span>N.A.</span>
+</div>
+
+<div class="sidebar" id="sidebar">
+  <a href="#" class="active">Dashboard</a>
+  <a href="#">Students</a>
+  <a href="#">Teachers</a>
+  <a href="#">Event</a>
+  <a href="#">Finance</a>
+  <a href="#">Food</a>
+  <a href="#">User</a>
+  <a href="#">Chat</a>
+  <a href="#">Latest Activity</a>
+</div>
+
+<div class="content">
+  <div class="form-section">
+    <h2>Add New Student</h2>
+    <form>
+      <label for="photo">Photo:</label>
+      <input type="file" id="photo" name="photo"><br>
+      <label for="first-name">First Name:</label>
+      <input type="text" id="first-name" name="first-name"><br>
+      <label for="last-name">Last Name:</label>
+      <input type="text" id="last-name" name="last-name"><br>
+      <label for="dob">Date & Place of Birth:</label>
+      <input type="text" id="dob" name="dob" value="24 February 1997"><br>
+      <label for="parent-name">Parent Name:</label>
+      <input type="text" id="parent-name" name="parent-name"><br>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email"><br>
+      <label for="phone">Phone:</label>
+      <input type="tel" id="phone" name="phone"><br>
+      <label for="address">Address:</label>
+      <textarea id="address" name="address" rows="4" placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit."></textarea>
+    </form>
+  </div>
+
+  <div class="form-section">
+    <h2>Parent Details</h2>
+    <form>
+      <label for="parent-first-name">First Name:</label>
+      <input type="text" id="parent-first-name" name="parent-first-name" value="Maria"><br>
+      <label for="parent-last-name">Last Name:</label>
+      <input type="text" id="parent-last-name" name="parent-last-name" value="William"><br>
+      <label for="parent-email">Email:</label>
+      <input type="email" id="parent-email" name="parent-email"><br>
+      <label for="parent-phone">Phone:</label>
+      <input type="tel" id="parent-phone" name="parent-phone"><br>
+      <label for="parent-address">Address:</label>
+      <textarea id="parent-address" name="parent-address" rows="4" placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit."></textarea><br>
+      <label for="payments">Payments:</label>
+      <select id="payments" name="payments">
+        <option value="cash" selected>Cash</option>
+        <option value="debit">Debit</option>
+      </select>
+    </form>
+  </div>
+
+  <button class="submit-btn">Save as Draft</button>
+  <button class="submit-btn primary">Submit</button>
+</div>
+
+<div class="footer">
+  <p>Akademi - School Admission Dashboard</p>
+  <p>Made with ❤️ by Peterdraw</p>
+</div>
+
+<script>
+document
